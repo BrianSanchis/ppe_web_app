@@ -25,3 +25,7 @@ Route::get('/test-database', function () {
         die("Impossible de se connecter à la base de données. Erreur : " . $e->getMessage());
     }
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
