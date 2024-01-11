@@ -26,6 +26,24 @@ Route::get('/test-database', function () {
     }
 });
 
+Route::get('/', function () {
+    return view('welcome'); // Assure-toi que tu as une vue appelée 'accueil.blade.php'
+})->name('home');
+
+// Route pour la page des médicaments
+Route::get('/medicaments', function () {
+    return view('medicaments'); // Assure-toi que tu as une vue appelée 'medicaments.blade.php'
+})->name('medicaments');
+
+// Route pour la page des machines
+Route::get('/machines', function () {
+    return view('machines'); // Assure-toi que tu as une vue appelée 'machines.blade.php'
+})->name('machines');
+
+Route::get('/connexion', function () {
+    return view('connexion'); // Assure-toi que tu as une vue appelée 'connexion.blade.php'
+})->name('connexion');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="\">Accueil</a>
+                        <a class="nav-link text-white" href="{{ route('home') }}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="\">Médicaments</a>
+                        <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="\">Machine</a>
+                        <a class="nav-link text-white" href="{{ route('machines') }}">Machine</a>
                     </li>
                 </ul>
-                    <a href="/utilisateur/connection" class="text-decoration-none">
+                    <a href="{{ route('connexion') }}" class="text-decoration-none">
                         <button class="btn btn-outline-dark d-flex align-items-center" type="#">
                             Se connecter
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 17">
@@ -82,7 +82,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Medicaments</h5>
                     <p class="card-text">Gestion des pompiers, vous pouvez ajouter, modifier ou supprimer un pompier de l'internet. Vous également retrouver toutes les informations concernant un pompier.</p>
-                    <a href="/pompier/affiche/?page=1&limit=10" class="btn btn-dark mt-6">Voir les produits</a>
+                    <a href="{{ route('medicaments') }}" class="btn btn-dark mt-6">Voir les produits</a>
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Machines</h5>
                     <p class="card-text">Gestion des casernes, vous pouvez ajouter, modifier ou supprimer une caserne de l'internet. Vous également retrouver toutes les informations concernant une caserne.</p>
-                    <a href="/pompier/affiche/?page=1&limit=10" class="btn btn-dark mt-6">Voir les produits</a>
+                    <a href="{{ route('machines') }}" class="btn btn-dark mt-6">Voir les produits</a>
                 </div>
             </div>
         </div>
