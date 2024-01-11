@@ -61,8 +61,9 @@
             <div class="card col-xs" style="width: 25rem;">
                 <img src="/img/pompiers.jpg" class="card-img-top mt-3" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Pompiers</h5>
+                    <h5 class="card-title">Medicaments</h5>
                     <p class="card-text">Gestion des pompiers, vous pouvez ajouter, modifier ou supprimer un pompier de l'internet. Vous également retrouver toutes les informations concernant un pompier.</p>
+                    <a href="/pompier/affiche/?page=1&limit=10" class="btn btn-dark">Voir les produits</a>
                 </div>
             </div>
 
@@ -71,8 +72,9 @@
             <div class="card col-xs" style="width: 25rem;">
                 <img src="/img/casernes.jpg" class="card-img-top mt-3" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Casernes</h5>
+                    <h5 class="card-title">Machines</h5>
                     <p class="card-text">Gestion des casernes, vous pouvez ajouter, modifier ou supprimer une caserne de l'internet. Vous également retrouver toutes les informations concernant une caserne.</p>
+                    <a href="/pompier/affiche/?page=1&limit=10" class="btn btn-dark">Voir les produits</a>
                 </div>
             </div>
         </div>
