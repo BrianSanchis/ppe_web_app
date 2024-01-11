@@ -1,0 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+@font-face {
+    font-family: 'ApercuMonoPro';
+    src: url('/font/ApercuMonoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'ApercuMonoPro', sans-serif;
+}
