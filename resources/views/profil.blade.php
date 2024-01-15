@@ -42,41 +42,10 @@
     </style>
 </head>
 <body class="antialiased">
-<nav class="navbar navbar-expand-lg bg-danger">
-    <div class="container-fluid">
-        <div class="mx-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="white" class="bi bi-capsule" viewBox="0 0 16 16">
-                <path d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429z"/>
-            </svg>
-        </div>
-        <a class="navbar-brand text-white" href="{{ route('home') }}">Fireman</a>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('home') }}">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('machines') }}">Machine</a>
-                </li>
-            </ul>
-            <a href="{{ route('connexion') }}" class="text-decoration-none">
-                <button class="btn btn-outline-dark d-flex align-items-center" type="#">
-                    Se connecter
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 17">
-                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v-2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    </svg>
-                </button>
-            </a>
-        </div>
-    </div>
-</nav>
+@include('layouts.navbar')
 
-<div class="container rounded w-25 my-5 d-flex flex-column justify-content-center bg-danger">
-    <form method="post" action="/utilisateur/connecté">
+<div class="container rounded w-25 my-5 d-flex flex-column justify-content-center bg-info">
+    <form method="get" action="/utilisateur/deconnecté">
         <div class="w-100 mt-4 d-flex justify-content-center" style="padding-bottom: -50px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="85" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -85,33 +54,22 @@
         </div>
         <div class="mb-3 w-75 mt-4" style="margin-left: auto; margin-right: auto">
             <label for="exampleFormControlInput1" class="form-label">Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom d'utilisateur" name="username">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom d'utilisateur" name="username" value="{{ Auth::user()->name }}" disabled>
         </div>
         <div class="mb-3 w-75" style="margin-left: auto; margin-right: auto">
             <label for="exampleFormControlInput1" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mot de passe" name="password">
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mot de passe" name="password" disabled>
         </div>
         <div class="mb-3 w-75" style="margin-left: auto; margin-right: auto">
             <label for="exampleFormControlInput1" class="form-label">Confirmation du mot de passe</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirmation du mot de passe" name="confPassword">
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirmation du mot de passe" name="confPassword" disabled>
         </div>
         <div class="col-auto mb-3 w-75" style="margin-left: auto; margin-right: auto">
-            <button type="submit" class="btn btn-dark mb-3 mt-3 bg-dark w-100">Se connecter</button>
-        </div>
-        <div class="col-auto mb-3">
-            <a href="/pompier/inscription">Vous n'avez pas de compte ? Cliquez pour s'inscrire</a>
+            <button type="submit" class="btn btn-dark mb-3 mt-3 bg-dark w-100">Se deconnecter</button>
         </div>
     </form>
 </div>
 
-<footer class="bg-danger text-light py-4">
-    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100px;">
-        <div class="row">
-            <div class="col-md-12">
-                <p>&copy; 2024 Swiss Galaxy. Tous droits réservés.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+@include('layouts.footer')
 </body>
 </html>

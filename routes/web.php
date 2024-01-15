@@ -1,53 +1,40 @@
 <?php
 
+use App\Http\Controllers\ParkingController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test-database', function () {
+Route::get('/test-connexion', function () {
     try {
         DB::connection()->getPdo();
-        echo "Connexion à la base de données établie avec succès.";
+        echo "Connexion à la base de données réussie.";
     } catch (\Exception $e) {
         die("Impossible de se connecter à la base de données. Erreur : " . $e->getMessage());
     }
 });
 
 Route::get('/', function () {
-    return view('welcome'); // Assure-toi que tu as une vue appelée 'accueil.blade.php'
+    return view('welcome');
 })->name('home');
 
-// Route pour la page des médicaments
 Route::get('/medicaments', function () {
-    return view('medicaments'); // Assure-toi que tu as une vue appelée 'medicaments.blade.php'
+    return view('medicaments');
 })->name('medicaments');
 
-// Route pour la page des machines
 Route::get('/machines', function () {
-    return view('machines'); // Assure-toi que tu as une vue appelée 'machines.blade.php'
+    return view('machines');
 })->name('machines');
 
-Route::get('/connexion', function () {
-    return view('connexion'); // Assure-toi que tu as une vue appelée 'connexion.blade.php'
-})->name('connexion');
+Route::get('/profil', function () {
+    return view('profil');
+})->name('profil');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/connection', [App\Http\Controllers\HomeController::class, 'index'])->name('connection');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+Route::get('/verify', function () {
+    return view('auth.verify');
+});
