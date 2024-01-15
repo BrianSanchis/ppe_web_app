@@ -16,13 +16,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/medicaments', function () {
-    return view('medicaments');
-})->name('medicaments');
+Route::get('/medicaments', [App\Http\Controllers\ProductController::class, 'showMedicaments'])->name('medicaments');
 
 Route::get('/machines', function () {
     return view('machines');
 })->name('machines');
+
 
 Route::get('/profil', function () {
     return view('profil');

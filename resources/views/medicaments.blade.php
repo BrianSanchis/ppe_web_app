@@ -42,63 +42,28 @@
     </style>
 </head>
 <body class="antialiased">
-<nav class="navbar navbar-expand-lg bg-danger">
-    <div class="container-fluid">
-        <div class="mx-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="white" class="bi bi-capsule" viewBox="0 0 16 16">
-                <path d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429z"/>
-            </svg>
-        </div>
-        <a class="navbar-brand text-white" href="{{ route('home') }}">Fireman</a>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('home') }}">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('machines') }}">Machine</a>
-                </li>
-            </ul>
-            <a href="{{ route('connection') }}" class="text-decoration-none">
-                <button class="btn btn-outline-dark d-flex align-items-center" type="#">
-                    Se connecter
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 17">
-                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v-2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    </svg>
-                </button>
-            </a>
-        </div>
-    </div>
-</nav>
+@include('layouts.navbar')
 
-<div class="container mb-5 d-flex flex-column align-items-center" style="margin-top: 115px;">
-    <div class="container rounded w-50 my-5 d-flex flex-column align-items-center justify-content-center bg-danger">
-        <div class="spinner-border text-light mt-5 mb-5" role="status"></div>
-        <h2 class="text-light mb-5">Oups... Notre équipe est actuellement entrain de développer ce module... Revenez plus tard !</h2>
-    </div>
-
-    <a href="{{ route('home') }}">
-        <button class="btn btn-secondary btn-dark mt-5 mb-5 d-flex align-items-center" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 20 16">
-                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
-            </svg>
-            Revenir en arrière
-        </button>
-    </a>
-</div>
-
-<footer class="bg-danger text-light py-4">
-    <div class="container d-flex align-items-center justify-content-center" style="min-height: 100px;">
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-12">
-                <p>&copy; 2024 Swiss Galaxy. Tous droits réservés.</p>
-            </div>
+            @foreach($medicaments as $medicament)
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('chemin/vers/votre/image/'.$medicament->image) }}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ $medicament->Libelle }}</h3>
+                            <p class="card-text">{{ $medicament->Description }}</p>
+                            <br>
+                            <p class="card-text">Prix: {{ $medicament->Price }} €</p>
+                            <br>
+                            <a href="#" class="btn btn-dark">Ajouter au panier</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
-</footer>
+
+@include('layouts.footer')
 </body>
 </html>
