@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('content')
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<div class="container">
-    <div class="row justify-content-center">
+@include('layouts.navbar')
+
+<div class="container custom-height-container d-flex align-items-center">
+    <div class="row justify-content-center w-100">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header bg-info">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -75,4 +75,5 @@
         </div>
     </div>
 </div>
-@endsection
+@include('layouts.footer')
+
