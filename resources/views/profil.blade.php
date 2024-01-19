@@ -2,7 +2,7 @@
 
 @include('layouts.navbar')
 
-<div class="container rounded w-25 my-5 d-flex flex-column justify-content-center bg-info">
+<div class="container rounded w-25 my-5 d-flex flex-column justify-content-center custom-background-color">
     <form method="POST" action="{{ route('logout') }}">
         @csrf
         <div class="w-100 mt-4 d-flex justify-content-center" style="padding-bottom: -50px;">

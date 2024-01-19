@@ -22,15 +22,12 @@ Route::get("/home", function (){
 
 Route::get('/medicaments', [App\Http\Controllers\ProductController::class, 'showMedicaments'])->name('medicaments');
 
-Route::get('/machines', function () {
-    return view('machines');
-})->name('machines');
+Route::get('/machines', [App\Http\Controllers\ProductController::class, 'showMachines'])->name('machines');
 
 
 Route::get('/profil', function () {
     return view('profil');
 })->name('profil');
-
 
 Auth::routes();
 Route::get('/login', [App\Http\Controllers\HomeController::class, 'index'])

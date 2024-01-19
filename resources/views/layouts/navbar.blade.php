@@ -1,5 +1,4 @@
-
-<nav class="navbar navbar-expand-lg bg-info">
+<nav class="navbar navbar-expand-lg custom-background-color">
     <div class="container-fluid">
         <div class="mx-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="white" class="bi bi-capsule" viewBox="0 0 16 16">

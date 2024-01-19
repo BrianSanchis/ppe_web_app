@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    protected $table = 'Category';
+    protected $primaryKey = 'IdCat';
+    public $incrementing = true;
+    public $timestamps = false;
+
+    // Définir la relation inverse (hasMany)
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'IdCat', 'IdCat');
+    }
 }
