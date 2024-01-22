@@ -16,16 +16,28 @@ Route::get('/test-connexion', function () {
 
 Route::get('/', function () {
     //creation des roles et des permissions, exemple
+    //1er étapes
     //$createAdmin = Role::create(['name' => 'Administrateur']);
     //$createCustomer = Role::create(['name' => 'Client']);
+    //$createGestion = Role::create(['name' => 'Gestion']);
+    //2ième étapes
     //$createRoleAdmin = Permission::create(['name' => 'Administrateur']);
     //$createRoleCustomer = Permission::create(['name' => 'Client']);
+    //$createRoleGestion = Permission::create(['name' => 'Gestion']);
+    //3ième étapes
     //$roleAdmin = Role::find(1);
     //$roleAdmin->givePermissionTo("Administrateur");
     //$roleCustomer = Role::find(2);
     //$roleCustomer->givePermissionTo("Client");
+    //$roleGestion = Role::find(3);
+    //$roleGestion->givePermissionTo("Gestion");
+    //4ième étapes
     //$user = auth()->user();
     //$assignRole = $user->assignRole('Administrateur');
+    //$user = auth()->user();
+    //$assignRole = $user->assignRole('Client');
+    //$user = auth()->user();
+    //$assignRole = $user->assignRole('Gestion');
     return view('welcome');
 })->name('home');
 
@@ -37,6 +49,7 @@ Route::get('/medicaments', [App\Http\Controllers\ProductController::class, 'show
 
 Route::get('/machines', [App\Http\Controllers\ProductController::class, 'showMachines'])->name('machines');
 
+Route::get('/utilisateurs', [App\Http\Controllers\UserController::class, 'showAll'])->name('utilisateurs');
 
 Route::get('/profil', function () {
     return view('profil');
@@ -60,3 +73,5 @@ Route::get('/register', function () {
 Route::get('/verify', function () {
     return view('auth.verify');
 });
+
+Route::get('/utilisateur', [App\Http\Controllers\UserController::class, 'showAll'])->name('utilisateur');

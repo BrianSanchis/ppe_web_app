@@ -11,35 +11,23 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('home') }}">Accueil</a>
                 </li>
-                @if(Auth::check())
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('machines') }}">Machines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('machines') }}">Panier</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('login') }}">Médicaments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('login') }}">Machines</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('login') }}">Panier</a>
-                    </li>
-                @endif
-                @role('Administrateur')
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('machines') }}">Liste utilisateur</a>
+                    <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('machines') }}">Machines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ route('machines') }}">Panier</a>
+                </li>
+                @role('Administrateur')
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('utilisateurs') }}">Liste utilisateur</a>
+                    </li>
                 @endrole
             </ul>
 
-                @if(Auth::check())
+                @auth
                     <a href="{{ route('profil') }}" class="text-decoration-none">
                         <button class="btn btn-outline-dark d-flex align-items-center" type="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 17 18">
@@ -71,7 +59,7 @@
                             </button>
                         </a>
                     @endif
-                @endif
+                @endauth
         </div>
     </div>
 </nav>
