@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ParkingController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 Route::get('/test-connexion', function () {
     try {
@@ -13,6 +15,17 @@ Route::get('/test-connexion', function () {
 });
 
 Route::get('/', function () {
+    //creation des roles et des permissions, exemple
+    //$createAdmin = Role::create(['name' => 'Administrateur']);
+    //$createCustomer = Role::create(['name' => 'Client']);
+    //$createRoleAdmin = Permission::create(['name' => 'Administrateur']);
+    //$createRoleCustomer = Permission::create(['name' => 'Client']);
+    //$roleAdmin = Role::find(1);
+    //$roleAdmin->givePermissionTo("Administrateur");
+    //$roleCustomer = Role::find(2);
+    //$roleCustomer->givePermissionTo("Client");
+    //$user = auth()->user();
+    //$assignRole = $user->assignRole('Administrateur');
     return view('welcome');
 })->name('home');
 

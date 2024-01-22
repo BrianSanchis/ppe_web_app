@@ -11,12 +11,32 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('home') }}">Accueil</a>
                 </li>
+                @if(Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('machines') }}">Machines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('machines') }}">Panier</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('login') }}">Médicaments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('login') }}">Machines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ route('login') }}">Panier</a>
+                    </li>
+                @endif
+                @role('Administrateur')
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('medicaments') }}">Médicaments</a>
+                    <a class="nav-link text-white" href="{{ route('machines') }}">Liste utilisateur</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('machines') }}">Machine</a>
-                </li>
+                @endrole
             </ul>
 
                 @if(Auth::check())

@@ -54,7 +54,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-3">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-outline-dark d-flex align-items-center">
                                     {{ __('Se connecter') }}
                                 </button>
 
