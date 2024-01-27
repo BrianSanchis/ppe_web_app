@@ -2,7 +2,7 @@
 
 @include('layouts.navbar')
 
-<div class="container my-5 d-flex flex-column align-items-center">
+<div class="container custom-height-container my-5 d-flex flex-column align-items-center">
     <div class="btn-group mb-4" role="group" aria-label="Basic outlined example">
         <!-- <a href="/pompier/demande"><button type="button" class="btn btn-danger">Ajouter</button></a> -->
         <a href="/pompier/demande" class="text-decoration-none">

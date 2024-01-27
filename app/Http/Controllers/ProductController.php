@@ -20,4 +20,5 @@ class ProductController extends Controller
         $machines = Category::find(1)->products()->paginate(12);
         return view('machines', ['machines'=>$machines]);
     }
+
 }

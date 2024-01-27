@@ -14,7 +14,7 @@
                         <br>
                         <p class="card-text">Prix: {{ $medicament->Price }} €</p>
                         <br>
-                        <a href="#" class="btn btn-dark">Ajouter au panier</a>
+                        <a href="{{ route('ajoute',$medicament->IdProduct) }}" class="btn btn-dark">Ajouter au panier</a>
                     </div>
                 </div>
             </div>

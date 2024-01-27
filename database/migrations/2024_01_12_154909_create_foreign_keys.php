@@ -13,17 +13,17 @@ class CreateForeignKeys extends Migration {
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
-		Schema::table('Order', function(Blueprint $table) {
-			$table->foreign('IdUser')->references('IdUser')->on('User')
+		Schema::table('Cart', function(Blueprint $table) {
+			$table->foreign('id')->references('id')->on('user')
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
-		Schema::table('OrderLine', function(Blueprint $table) {
-			$table->foreign('IdOrder')->references('IdOrder')->on('Order')
+		Schema::table('CartLine', function(Blueprint $table) {
+			$table->foreign('IdOrder')->references('IdOrder')->on('Cart')
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
-		Schema::table('OrderLine', function(Blueprint $table) {
+		Schema::table('CartLine', function(Blueprint $table) {
 			$table->foreign('IdProduct')->references('IdProduct')->on('Product')
 						->onDelete('restrict')
 						->onUpdate('restrict');
@@ -40,14 +40,14 @@ class CreateForeignKeys extends Migration {
 		Schema::table('User', function(Blueprint $table) {
 			$table->dropForeign('User_IdRole_foreign');
 		});
-		Schema::table('Order', function(Blueprint $table) {
-			$table->dropForeign('Order_IdUser_foreign');
+		Schema::table('Cart', function(Blueprint $table) {
+			$table->dropForeign('Order_id_foreign');
 		});
-		Schema::table('OrderLine', function(Blueprint $table) {
-			$table->dropForeign('OrderLine_IdOrder_foreign');
+		Schema::table('CartLine', function(Blueprint $table) {
+			$table->dropForeign('CartLine_IdOrder_foreign');
 		});
-		Schema::table('OrderLine', function(Blueprint $table) {
-			$table->dropForeign('OrderLine_IdProduct_foreign');
+		Schema::table('CartLine', function(Blueprint $table) {
+			$table->dropForeign('CartLine_IdProduct_foreign');
 		});
 		Schema::table('Product', function(Blueprint $table) {
 			$table->dropForeign('Product_IdCat_foreign');

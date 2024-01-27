@@ -75,3 +75,11 @@ Route::get('/verify', function () {
 });
 
 Route::get('/utilisateur', [App\Http\Controllers\UserController::class, 'showAll'])->name('utilisateur');
+
+Route::get('/panier',[App\Http\Controllers\CartController::class, 'index'])->name('panier');
+
+Route::get('/panier/{id}',[App\Http\Controllers\CartController::class, 'addToCart'])->name('ajoute');
+
+Route::get('/panier/supprimer/{id}',[App\Http\Controllers\CartController::class, 'deleteProduct'])->name('supprimer');
+
+

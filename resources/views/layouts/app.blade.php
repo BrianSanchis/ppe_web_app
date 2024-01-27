@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Swiss Galaxy Shop</title>
+    <title>PharmaShop</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,6 +22,17 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css">
+
+
+    <!-- IDK-->
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/vendors/ion.rangeSlider.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick/slick-theme.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="../assets/css/demo4.css">
 
     <!-- Styles -->
     <style>
