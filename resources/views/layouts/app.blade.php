@@ -54,7 +54,23 @@
             letter-spacing: 1px;
         }
         .custom-height-container {
-            height: 1000px; /* Ajustez la valeur selon vos besoins */
+            height: 1000px;
+        }
+        .total-price-container {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .total-price-title {
+            margin-bottom: 5px;
+        }
+
+        .total-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
         }
         .custom-background-color{
             background-color: rgb(118, 159, 221, 255);

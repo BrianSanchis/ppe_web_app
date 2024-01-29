@@ -58,4 +58,36 @@ class CartController extends Controller
 
         return redirect()->back();
     }
+
+    public function updateCart(Request $request)
+    {
+        $cart = session()->get('cart');
+
+        if ($request->has('quantity')) {
+            foreach ($request->quantity as $id => $quantity) {
+                if (isset($cart[$id])) {
+                    $cart[$id]['quantity'] = $quantity;
+                }
+            }
+
+            session()->put('cart', $cart);
+
+            $totalPrice = $this->calculateTotalPrice($cart);
+
+            return redirect()->back()->with('success', 'Quantité mise à jour dans le panier.')->with('totalPrice', $totalPrice);
+        }
+
+        return redirect()->back()->with('error', 'Aucune quantité spécifiée.');
+    }
+
+    private function calculateTotalPrice($cart)
+    {
+        $totalPrice = 0;
+
+        foreach ($cart as $id => $details) {
+            $totalPrice += $details['Price'] * $details['quantity'];
+        }
+
+        return $totalPrice;
+    }
 }

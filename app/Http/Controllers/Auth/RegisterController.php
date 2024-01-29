@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+    public function index(){
+        return view('auth.register');
+    }
     /*
     |--------------------------------------------------------------------------
     | Register Controller

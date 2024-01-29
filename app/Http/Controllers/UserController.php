@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function showAll(Request $request)
-    {
+    public function index(){
+        return view('profil');
+    }
+
+    public function showAll(Request $request){
         $utilisateurs = User::paginate(10);
         return view('showUsers', ['utilisateurs'=>$utilisateurs]);
     }

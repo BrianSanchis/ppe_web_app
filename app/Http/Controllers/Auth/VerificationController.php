@@ -8,6 +8,10 @@ use Illuminate\Foundation\Auth\VerifiesEmails;
 
 class VerificationController extends Controller
 {
+    public function index(){
+        return view('auth.verify');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Email Verification Controller

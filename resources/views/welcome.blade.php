@@ -2,7 +2,7 @@
 
 @include('layouts.navbar')
 
-<div class="container d-flex justify-content-center aligns-items-center" style="height: 92vh">
+<div class="container custom-height-container d-flex justify-content-center aligns-items-center" style="height: 92vh">
     <div class="row align-items-center">
         <div class="card col-xs" style="width: 25rem;">
             <img src="{{ asset('images/medicaments.jpg') }}" class="card-img-top mt-3" alt="...">
