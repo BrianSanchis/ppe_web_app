@@ -58,8 +58,6 @@
         @endif
         </tbody>
     </table>
-        <button type="submit" class="btn bg-primary">Mettre à jour le panier</button>
-    </form>
 
     <div class="total-price-container">
         <h4 class="total-price-title">Prix total du panier:</h4>
@@ -67,6 +65,12 @@
             <span id="totalPrice">{{ $totalPrice }}</span>€
         </div>
     </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn bg-dark mt-5 mr-3 text-white">Mettre à jour le panier</button>
+        </div>
+    </form>
+    <a href="{{ route('recapitulatif') }}" class="btn btn-primary mt-5">Passer la commande</a>
 </div>
 
 @include('layouts.footer')

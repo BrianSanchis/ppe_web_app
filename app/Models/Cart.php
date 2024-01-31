@@ -13,4 +13,6 @@ class Cart extends Model
     protected $primaryKey = 'IdCart';
     public $incrementing = true;
     public $timestamps = true;
+
+    protected $fillable = ['id'];
 }

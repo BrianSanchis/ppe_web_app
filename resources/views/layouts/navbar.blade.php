@@ -82,7 +82,6 @@
 
 <div class="container mt-4">
     @if(session('success'))
-        <h2 class="mb-3">Ajout au panier</h2>
         <div class="alert alert-success">
             {{ session('success') }}
         </div>

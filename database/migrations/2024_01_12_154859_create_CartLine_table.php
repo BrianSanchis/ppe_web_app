@@ -7,11 +7,16 @@ class CreateCartLineTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('CartLine', function(Blueprint $table) {
-			$table->bigInteger('Quantity');
-			$table->integer('IdCart')->primary()->unsigned();
-			$table->integer('IdProduct');
-		});
+        Schema::create('CartLine', function(Blueprint $table) {
+            $table->bigInteger('Quantity');
+            $table->bigInteger('IdCart');
+            $table->bigInteger('IdProduct');
+
+            $table->primary(['IdCart', 'IdProduct']);
+
+            $table->foreign('IdCart')->references('IdCart')->on('Cart');
+            $table->foreign('IdProduct')->references('IdProduct')->on('Product');
+        });
 	}
 
 	public function down()

@@ -25,6 +25,7 @@ class CartController extends Controller
             $cart[$id]['quantity']++;
         }else{
             $cart[$id] = [
+                "IdProduct" => $product->IdProduct,
                 "Libelle" => $product->Libelle,
                 "Price" => $product->Price,
                 "Description" => $product->Description,
