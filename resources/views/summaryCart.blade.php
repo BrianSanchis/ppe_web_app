@@ -3,10 +3,10 @@
 @include('layouts.navbar')
 
 <div class="container custom-height-container">
-    <h1 class="mb-5">Récapitulatif du Panier</h1>
     <form action="{{ route('validation') }}" method="POST">
     @csrf
     @if(count($cart) > 0)
+            <h1 class="mb-5">Récapitulatif du Panier</h1>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -46,11 +46,16 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn bg-primary mt-5 mr-3 text-white">Valider ma commande</button>
+            <button type="submit" id="validateButton" class="btn bg-primary mt-5 mr-3 text-white">Valider ma commande</button>
         </div>
     </form>
+
     @else
         <p>Votre panier est vide.</p>
+
+        <div class="d-flex justify-content-center">
+            <a href="{{ route('home') }}" class="btn btn-secondary mt-5 mr-3 text-white">Revenir à l'accueil</a>
+        </div>
     @endif
 </div>
 

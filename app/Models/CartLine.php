@@ -16,8 +16,8 @@ class CartLine extends Model
 
     protected $fillable = ['IdCart', 'IdProduct', 'Quantity'];
 
-    public function cart()
+    public function products()
     {
-        return $this->belongsTo(Cart::class, 'IdCart', 'IdCart');
+        return $this->hasManyThrough(Product::class, CartLine::class, 'IdCart', 'IdProduct');
     }
 }

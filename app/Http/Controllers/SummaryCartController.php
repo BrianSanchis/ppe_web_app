@@ -43,6 +43,8 @@ class SummaryCartController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Votre commande à bien été faite !');
+        session()->forget('cart');
+
+        return redirect()->back()->with('success', 'Votre commande à bien été passé !');
     }
 }

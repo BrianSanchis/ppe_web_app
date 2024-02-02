@@ -70,6 +70,9 @@ Route::get('/panier/{id}',[App\Http\Controllers\CartController::class, 'addToCar
 Route::get('/panier/supprimer/{id}',[App\Http\Controllers\CartController::class, 'deleteProduct'])->name('supprimer');
 Route::put('/panier/mettre-a-jour', [App\Http\Controllers\CartController::class, 'updateCart'])->name('updateCart');
 
-
+//Ggestion du récapitulatif du panier
 Route::get('/recapitulatif',[App\Http\Controllers\SummaryCartController::class, 'showCartSummary'])->name('recapitulatif');
 Route::post('/recapitulatif/validation',[App\Http\Controllers\SummaryCartController::class, 'validateCartSummary'])->name('validation');
+
+
+Route::get('/commandes',[App\Http\Controllers\OrderController::class, 'showUserOrders'])->name('commandes');

@@ -15,4 +15,8 @@ class Cart extends Model
     public $timestamps = true;
 
     protected $fillable = ['id'];
+
+    public function user(): HasOne{
+        return $this->hasOne(User::class,'id','id');
+    }
 }
