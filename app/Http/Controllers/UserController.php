@@ -16,4 +16,8 @@ class UserController extends Controller
         $utilisateurs = User::paginate(10);
         return view('showUsers', ['utilisateurs'=>$utilisateurs]);
     }
+
+    public function form(){
+        return view('addUser');
+    }
 }

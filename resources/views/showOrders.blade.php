@@ -10,10 +10,12 @@
         @endphp
         {{-- Vérifier si la collection est vide --}}
         @if($orderedProducts->isEmpty())
-            <div class="container border border-dark rounded w-50 text-center">
-                <h1 class="mb-2 mt-5">Aucune commande trouvée</h1>
-                <p class="mb-5">Vous n'avez pas encore passé de commande.</p>
-                <a href="{{ route('home') }}" class="btn btn-dark mb-5 custom-background-color border-0">Retour à l'accueil</a>
+            <div class="container custom-height-container d-flex align-items-center">
+                <div class="container border border-dark rounded w-50 text-center">
+                    <h1 class="mb-2 mt-5">Aucune commande trouvée</h1>
+                    <p class="mb-5">Vous n'avez pas encore passé de commande.</p>
+                    <a href="{{ route('home') }}" class="btn btn-dark mb-5 custom-background-color border-0">Retour à l'accueil</a>
+                </div>
             </div>
             @else
                 {{-- Boucle foreach pour itérer sur les commandes --}}

@@ -19,7 +19,7 @@ class CreateForeignKeys extends Migration {
 						->onUpdate('restrict');
 		});
 		Schema::table('CartLine', function(Blueprint $table) {
-			$table->foreign('IdOrder')->references('IdOrder')->on('Cart')
+			$table->foreign('IdCart')->references('IdCart')->on('Cart')
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});

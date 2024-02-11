@@ -5,7 +5,7 @@
 <div class="container custom-height-container custom-height-container my-5 d-flex flex-column align-items-center">
     <div class="btn-group mb-4" role="group" aria-label="Basic outlined example">
         <!-- <a href="/pompier/demande"><button type="button" class="btn btn-danger">Ajouter</button></a> -->
-        <a href="/pompier/demande" class="text-decoration-none">
+        <a href="{{ route('ajout') }}" class="text-decoration-none">
             <button class="btn bg-dark d-flex align-items-center text-light" type="button">
                 Ajouter
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">

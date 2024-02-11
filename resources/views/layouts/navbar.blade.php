@@ -27,7 +27,11 @@
                     <a class="nav-link text-white" href="{{ route('machines') }}">Machines</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('commandes') }}">Commandes</a>
+                    @auth
+                        <a class="nav-link text-white" href="{{ route('commandes') }}">Commandes</a>
+                    @else
+                        <a class="nav-link text-white" href="{{ route('connection') }}">Commandes</a>
+                    @endauth
                 </li>
                 <li class="nav-item d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart3" viewBox="0 0 16 16">

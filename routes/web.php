@@ -76,3 +76,6 @@ Route::post('/recapitulatif/validation',[App\Http\Controllers\SummaryCartControl
 
 
 Route::get('/commandes',[App\Http\Controllers\OrderController::class, 'showUserOrders'])->name('commandes');
+
+//Gestion des utilisateur par l'admin
+Route::get('/ajout',[App\Http\Controllers\UserController::class, 'form'])->name('ajout');
