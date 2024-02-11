@@ -14,7 +14,7 @@ class CartLine extends Model
     public $incrementing = false;
     public $timestamps = false;
 
-    protected $fillable = ['IdCart', 'IdProduct', 'Quantity'];
+    protected $fillable = ['IdCart', 'IdProduct', 'Price','Quantity'];
 
     public function products()
     {

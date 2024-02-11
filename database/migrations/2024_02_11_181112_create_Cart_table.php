@@ -8,9 +8,10 @@ class CreateCartTable extends Migration {
 	public function up()
 	{
 		Schema::create('Cart', function(Blueprint $table) {
-			$table->increments('IdCart');
+			$table->increments('IdCart',true);
 			$table->timestamps();
-			$table->integer('id')->unsigned();
+			$table->bigInteger('id')->unsigned();
+            $table->foreign('id')->references('id')->on('users');
 		});
 	}
 

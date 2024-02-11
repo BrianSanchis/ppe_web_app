@@ -13,7 +13,7 @@ class CreateProductTable extends Migration {
 			$table->float('Price');
 			$table->string('Description', 255);
 			$table->integer('Stock');
-			$table->float('Dosage');
+			$table->float('Dosage')->nullable();
 			$table->integer('IdCat')->unsigned();
 		});
 	}

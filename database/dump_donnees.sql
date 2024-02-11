@@ -44,23 +44,6 @@ INSERT INTO `Category` VALUES (1,'Machine'),(2,'Medicament');
 /*!40000 ALTER TABLE `Category` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Dumping data for table `Order`
---
-
-LOCK TABLES `Order` WRITE;
-/*!40000 ALTER TABLE `Order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Order` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `OrderLine`
---
-
-LOCK TABLES `OrderLine` WRITE;
-/*!40000 ALTER TABLE `OrderLine` DISABLE KEYS */;
-/*!40000 ALTER TABLE `OrderLine` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Dumping data for table `Product`
@@ -70,24 +53,6 @@ LOCK TABLES `Product` WRITE;
 /*!40000 ALTER TABLE `Product` DISABLE KEYS */;
 INSERT INTO `Product` VALUES (29,'Paracétamol',5.99,'Soulage la douleur et réduit la fièvre',100,500,2),(30,'Scanner Médical',1500.00,'Scanner haute résolution pour diagnostics médicaux',10,NULL,1),(31,'Ibuprofène',7.49,'Anti-inflammatoire non stéroïdien',80,400,2),(32,'ECG Machine',2500.00,'Enregistre l activité électrique du cœur',5,NULL,1),(33,'Aspirine',4.99,'Réduit la douleur et l inflammation',120,300,2),(34,'Imagerie par Résonance Magnétique (IRM)',5000.00,'Technologie avancée pour imagerie médicale',8,NULL,1),(35,'Ventilateur Médical',3000.00,'Assistance respiratoire pour les patients',15,NULL,1),(36,'Antibiotique',12.99,'Traitement des infections bactériennes',50,NULL,2),(37,'Tomographe Axial Computé (TAC)',8000.00,'Imagerie médicale avancée en coupe transversale',7,NULL,1),(38,'Anti-allergique',9.99,'Réduit les réactions allergiques',60,NULL,2),(39,'Échographe',4000.00,'Imagerie par ultrasons pour visualiser les organes internes',12,NULL,1),(40,'Antalgique',6.49,'Réduit la sensation de douleur',90,NULL,2),(41,'Stéthoscope électronique',120.00,'Amplifie les sons corporels pour l auscultation',25,NULL,1),(42,'Antiémétique',8.99,'Previent les nausees',40,NULL,2),(43,'IRM fonctionnelle',6000.00,'Imagerie cérébrale pour étudier l activité cérébrale',6,NULL,1),(44,'Antipyrétique',5.49,'Réduit la fièvre',80,NULL,2),(45,'Dialyseur',3500.00,'Appareil pour la dialyse rénale',10,NULL,1),(46,'Vaccin',18.99,'Immunisation contre les maladies infectieuses',30,NULL,2),(47,'Laser médical',7000.00,'Utilisé en chirurgie et thérapie',8,NULL,1),(48,'Sérum physiologique',3.99,'Solution saline pour divers usages médicaux',100,NULL,2),(49,'Chirurgie robotique',12000.00,'Utilisation de robots pour des interventions chirurgicales',5,NULL,1),(50,'Antifongique',11.49,'Traitement des infections fongiques',35,NULL,2),(51,'Endoscope',2500.00,'Instrument pour l exploration visuelle des cavités internes',15,NULL,1),(52,'Vitamine C',7.99,'Supplément vitaminique essentiel',70,NULL,2),(53,'Lit médicalisé',2000.00,'Lit conçu pour les patients malades ou convalescents',20,NULL,1),(54,'Cathéter',15.99,'Tube médical pour l administration de fluides',45,NULL,2),(55,'Oxymètre de pouls',50.00,'Mesure la saturation en oxygène dans le sang',30,NULL,1),(56,'Antiseptique',4.49,'Désinfectant pour les plaies et la peau',60,NULL,2),(57,'Paracétamol',5.99,'Soulage la douleur et réduit la fièvre',100,500,2),(58,'Scanner Médical',1500.00,'Scanner haute résolution pour diagnostics médicaux',10,NULL,1),(59,'Ibuprofène',7.49,'Anti-inflammatoire non stéroïdien',80,400,2),(60,'ECG Machine',2500.00,'Enregistre l activité électrique du cœur',5,NULL,1),(61,'Aspirine',4.99,'Réduit la douleur et l inflammation',120,300,2),(62,'Imagerie par Résonance Magnétique (IRM)',5000.00,'Technologie avancée pour imagerie médicale',8,NULL,1),(63,'Ventilateur Médical',3000.00,'Assistance respiratoire pour les patients',15,NULL,1),(64,'Antibiotique',12.99,'Traitement des infections bactériennes',50,NULL,2),(65,'Tomographe Axial Computé (TAC)',8000.00,'Imagerie médicale avancée en coupe transversale',7,NULL,1),(66,'Anti-allergique',9.99,'Réduit les réactions allergiques',60,NULL,2),(67,'Échographe',4000.00,'Imagerie par ultrasons pour visualiser les organes internes',12,NULL,1),(68,'Antalgique',6.49,'Réduit la sensation de douleur',90,NULL,2),(69,'Stéthoscope électronique',120.00,'Amplifie les sons corporels pour l auscultation',25,NULL,1),(70,'Antiémétique',8.99,'Previent les nausees',40,NULL,2),(71,'IRM fonctionnelle',6000.00,'Imagerie cérébrale pour étudier l activité cérébrale',6,NULL,1),(72,'Antipyrétique',5.49,'Réduit la fièvre',80,NULL,2),(73,'Dialyseur',3500.00,'Appareil pour la dialyse rénale',10,NULL,1),(74,'Vaccin',18.99,'Immunisation contre les maladies infectieuses',30,NULL,2),(75,'Laser médical',7000.00,'Utilisé en chirurgie et thérapie',8,NULL,1),(76,'Sérum physiologique',3.99,'Solution saline pour divers usages médicaux',100,NULL,2),(77,'Chirurgie robotique',12000.00,'Utilisation de robots pour des interventions chirurgicales',5,NULL,1),(78,'Antifongique',11.49,'Traitement des infections fongiques',35,NULL,2),(79,'Endoscope',2500.00,'Instrument pour l exploration visuelle des cavités internes',15,NULL,1),(80,'Vitamine C',7.99,'Supplément vitaminique essentiel',70,NULL,2),(81,'Lit médicalisé',2000.00,'Lit conçu pour les patients malades ou convalescents',20,NULL,1),(82,'Cathéter',15.99,'Tube médical pour l administration de fluides',45,NULL,2),(83,'Oxymètre de pouls',50.00,'Mesure la saturation en oxygène dans le sang',30,NULL,1),(84,'Antiseptique',4.49,'Désinfectant pour les plaies et la peau',60,NULL,2),(85,'Scanner Portable',1200.00,'Scanner médical portable pour diagnostics rapides',15,NULL,1),(86,'Anti-hypertenseur',9.49,'Contrôle la pression artérielle',40,NULL,2),(87,'Électrocardiographe (ECG)',1800.00,'Mesure l activité électrique du cœur',12,NULL,1),(88,'Anti-diabétique',10.99,'Traitement du diabète',25,NULL,2),(89,'Moniteur de Pression Artérielle',75.00,'Mesure la pression artérielle',30,NULL,1);
 /*!40000 ALTER TABLE `Product` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `Role`
---
-
-LOCK TABLES `Role` WRITE;
-/*!40000 ALTER TABLE `Role` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Role` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `User`
---
-
-LOCK TABLES `User` WRITE;
-/*!40000 ALTER TABLE `User` DISABLE KEYS */;
-/*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

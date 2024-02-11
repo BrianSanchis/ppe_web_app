@@ -69,6 +69,13 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ```git clone -b dev https://gitlab.com/sco-chartreux/slam-23-24/sanchis-brian/ppe_web_app.git```
 
+```cd ppe_web_app```
+
 ```composer update```
 
+```cp .env.example .env```
+
+```php artisan key:generate```
+
+```php artisan serve```
 

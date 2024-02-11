@@ -39,6 +39,7 @@ class SummaryCartController extends Controller
             CartLine::create([
                 'IdCart' => $panier->IdCart,
                 'IdProduct' => $idProduit,
+                'Price' => 0,
                 'Quantity' => $request->input('quantite')[$index], // Quantité du produit
             ]);
         }

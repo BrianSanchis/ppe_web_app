@@ -8,16 +8,6 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
-		Schema::table('User', function(Blueprint $table) {
-			$table->foreign('IdRole')->references('IdRole')->on('Role')
-						->onDelete('restrict')
-						->onUpdate('restrict');
-		});
-		Schema::table('Cart', function(Blueprint $table) {
-			$table->foreign('id')->references('id')->on('user')
-						->onDelete('restrict')
-						->onUpdate('restrict');
-		});
 		Schema::table('CartLine', function(Blueprint $table) {
 			$table->foreign('IdCart')->references('IdCart')->on('Cart')
 						->onDelete('restrict')
@@ -37,14 +27,11 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
-		Schema::table('User', function(Blueprint $table) {
-			$table->dropForeign('User_IdRole_foreign');
-		});
 		Schema::table('Cart', function(Blueprint $table) {
-			$table->dropForeign('Order_id_foreign');
+			$table->dropForeign('Cart_id_foreign');
 		});
 		Schema::table('CartLine', function(Blueprint $table) {
-			$table->dropForeign('CartLine_IdOrder_foreign');
+			$table->dropForeign('CartLine_IdCart_foreign');
 		});
 		Schema::table('CartLine', function(Blueprint $table) {
 			$table->dropForeign('CartLine_IdProduct_foreign');

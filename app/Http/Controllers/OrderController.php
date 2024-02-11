@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\DB;
 class OrderController extends Controller
 {
     public function showUserOrders() {
-        // Récupérer l'utilisateur actuellement authentifié avec ses commandes et les produits associés
-
         $user = auth()->id();
-
-
 
         $orderedProducts = DB::table('Product')
             ->join('CartLine', 'Product.IdProduct', '=', 'CartLine.IdProduct')
