@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <div class="container custom-height-container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -21,4 +21,5 @@
         </div>
     </div>
 </div>
+
 @endsection
