@@ -99,5 +99,5 @@ INSERT INTO `Cart` (`created_at`, `updated_at`, `id`) VALUES
                                                           ('2024-02-07 12:01:37','2024-02-07 12:01:37',3),
                                                           ('2024-02-07 14:57:42','2024-02-07 14:57:42',3);
 
---SEED DE LA LIGNE PANIER
+--SEED DE LA LIGNE PANIER rezqr
 INSERT INTO `CartLine` (`Quantity`, `Price`, `IdCart`,`IdProduct`) VALUES (1,0,6,21),(1,0,7,22),(1,0,8,23),(1,0,9,24),(1,0,10,25),(1,0,11,26),(1,0,12,27),(20,0,13,28),(1,0,14,29),(1,0,15,30),(10,0,16,31),(1,0,17,32),(1,0,18,33),(11,0,19,34);
