@@ -50,6 +50,8 @@ Route::get("/home", function (){
 //Page des produits
 Route::get('/medicaments', [App\Http\Controllers\ProductController::class, 'showMedicaments'])->name('medicaments');
 Route::get('/machines', [App\Http\Controllers\ProductController::class, 'showMachines'])->name('machines');
+Route::get('/recherche/medicaments', [App\Http\Controllers\ProductController::class, 'searchMedicaments'])->name('recherche medicaments');
+Route::get('/recherche/machines', [App\Http\Controllers\ProductController::class, 'searchMachines'])->name('recherche machines');
 
 //Affichage des utilisateurs
 Route::get('/utilisateurs', [App\Http\Controllers\UserController::class, 'showAll'])->name('utilisateurs');
