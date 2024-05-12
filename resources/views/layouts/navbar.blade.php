@@ -43,7 +43,7 @@
                         <a class="nav-link text-white" href="{{ route('connection') }}">Panier</a><span id="cartItemCount" class="badge bg-danger">{{ $totalItems }}</span>
                     @endauth
                 </li>
-                @if(Auth::user()->name = 'admin')
+                @if(Auth::user()->name == 'admin')
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('utilisateurs') }}">Liste utilisateur</a>
                     </li>
