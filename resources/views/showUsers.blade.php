@@ -5,6 +5,7 @@
 <div class="container custom-height-container custom-height-container my-5 d-flex flex-column align-items-center">
     <div class="btn-group mb-4" role="group" aria-label="Basic outlined example">
         <!-- <a href="/pompier/demande"><button type="button" class="btn btn-danger">Ajouter</button></a> -->
+        <!--
         <a href="{{ route('ajout') }}" class="text-decoration-none">
             <button class="btn bg-dark d-flex align-items-center text-light" type="button">
                 Ajouter
@@ -14,6 +15,7 @@
                 </svg>
             </button>
         </a>
+        -->
     </div>
     <table class="table table-striped" style="width: 140%">
         <thead>
@@ -23,7 +25,7 @@
             <th scope="col">Email</th>
             <th scope="col">Date de creation</th>
             <th scope="col">Rôles</th>
-            <th scope="col">Actions</th>
+            <!--<th scope="col">Actions</th>-->
         </tr>
         </thead>
         <tbody>
@@ -38,6 +40,7 @@
                         <span class="badge bg-primary">{{ $role->name }}</span>
                     @endforeach
                 </td>
+                <!--
                 <td>
                     <div class="btn-group gap-1" role="group" aria-label="Basic mixed styles example">
                         <a href="#"><button type="button" class="btn bg-success">Afficher</button></a>
@@ -45,6 +48,7 @@
                         <a href="#"><button type="button" class="btn bg-danger">Supprimer</button></a>
                     </div>
                 </td>
+                -->
             </tr>
         @endforeach
         </tbody>
